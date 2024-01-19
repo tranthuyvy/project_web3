@@ -22,6 +22,10 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 const Welcome = () => {
   const [isLoading, setIsLoading] = useState(false)
 
+  const connectWallet = () => {
+    console.log('Connecting ...')
+  }
+
   const handleChange = () => {
     console.log('Click handleChange')
   }
@@ -44,7 +48,7 @@ const Welcome = () => {
 
           <button
             type="button"
-            // onClick={connectWallet}
+            onClick={connectWallet}
             className="flex flex-row justify-center items-center my-5 bg-[#e35129] p-3 rounded-md cursor-pointer hover:bg-[#bd4125]"
           >
             <AiFillPlayCircle className="text-white mr-2" />
