@@ -14,14 +14,14 @@ const Navbar = () => {
 
   return (
     <nav className="w-full flex md:justify-center justify-between items-center p-4">
-      <div className="md:flex-[1] flex-initial justify-center items-center">
+      <div className="md:flex-1 flex-initial justify-center items-center">
         <img src={logo} alt='logo' className='w-32 cursor-pointer' />
       </div>
       <ul className='text-white md:flex hidden list-none flex-row justify-between items-center flex-initial'>
         {['Market', 'Exchange', 'Tutorials', 'Wallets'].map((item, index) => (
           <NavBarItem key={item + index} title={item} />
         ))}
-        <li className='bg-[#162b7c] py-2 px-7 mx-4 rounded-md cursor-pointer hover:bg-[#0c2461]'>
+        <li className='bg-[#e35129] py-2 px-7 mx-4 rounded-md cursor-pointer hover:bg-[#bd4125]'>
           Login
         </li>
       </ul>
