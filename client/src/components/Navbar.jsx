@@ -4,7 +4,7 @@ import { HiMenuAlt4 } from 'react-icons/hi'
 import { AiOutlineClose } from 'react-icons/ai'
 
 const NavBarItem = ({ title, classprops }) => (
-  <li className={`mx-4 cursor-pointer ${classprops}`}>
+  <li className={`mx-4 cursor-pointer ${classprops} hover:border-b-2`}>
     {title}
   </li>
 )
