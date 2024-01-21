@@ -22,18 +22,15 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 
 const Welcome = () => {
   const isLoading = false
-  const handleChange = () => {
-
-  }
-  const { connectWallet } = useContext(TransactionContext)
+  const { connectWallet, currentAccount, handleChange, formData, sendTransaction } = useContext(TransactionContext)
 
   const handleSubmit = (e) => {
-    // const { addressTo, amount, keyword, message } = formData
-    // e.preventDefault()
+    const { addressTo, amount, keyword, message } = formData
+    e.preventDefault()
 
-    // if (!addressTo || !amount || !keyword || !message) return
+    if (!addressTo || !amount || !keyword || !message) return
 
-    // sendTransaction()
+    sendTransaction()
   }
 
   return (
@@ -48,7 +45,7 @@ const Welcome = () => {
             Explore the crypto world. Buy and sell cryptocurrencies easily on Krypto.
           </p>
 
-          {(
+          {!currentAccount && (
             <button
               type="button"
               onClick={connectWallet}
