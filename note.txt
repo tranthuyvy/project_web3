@@ -1,3 +1,6 @@
 yarn add (npm i) react-icons ethers
 ethers using for allow interact with blockchain
 Custom Card Color: https://www.csshero.org/mesher/
+
+
+get constantAddress: npx hardhat run scripts/deploy.js --network goerli
