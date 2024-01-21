@@ -1,9 +1,10 @@
 /* eslint-disable no-console */
-import { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { AiFillPlayCircle } from 'react-icons/ai'
 import { SiEthereum } from 'react-icons/si'
 import { BsInfoCircle } from 'react-icons/bs'
 
+import { TransactionContext } from '../context/TransactionContext'
 import { Loader } from '.'
 
 const companyCommonStyles = 'min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white'
@@ -20,18 +21,19 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 )
 
 const Welcome = () => {
-  const [isLoading, setIsLoading] = useState(false)
-
-  const connectWallet = () => {
-    console.log('Connecting ...')
-  }
-
+  const isLoading = false
   const handleChange = () => {
-    console.log('Click handleChange')
-  }
 
-  const handleSubmit = () => {
-    console.log('Click handleSubmit')
+  }
+  const { connectWallet } = useContext(TransactionContext)
+
+  const handleSubmit = (e) => {
+    // const { addressTo, amount, keyword, message } = formData
+    // e.preventDefault()
+
+    // if (!addressTo || !amount || !keyword || !message) return
+
+    // sendTransaction()
   }
 
   return (
@@ -46,16 +48,18 @@ const Welcome = () => {
             Explore the crypto world. Buy and sell cryptocurrencies easily on Krypto.
           </p>
 
-          <button
-            type="button"
-            onClick={connectWallet}
-            className="flex flex-row justify-center items-center my-5 bg-[#e35129] p-3 rounded-md cursor-pointer hover:bg-[#bd4125]"
-          >
-            <AiFillPlayCircle className="text-white mr-2" />
-            <p className="text-white text-base font-semibold">
-              Connect Wallet
-            </p>
-          </button>
+          {(
+            <button
+              type="button"
+              onClick={connectWallet}
+              className="flex flex-row justify-center items-center my-5 bg-[#e35129] p-3 rounded-md cursor-pointer hover:bg-[#bd4125]"
+            >
+              <AiFillPlayCircle className="text-white mr-2" />
+              <p className="text-white text-base font-semibold">
+                Connect Wallet
+              </p>
+            </button>
+          )}
 
           <div className='grid sm:grid-cols-3 grid-cols-2 w-full mt-10'>
             <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
