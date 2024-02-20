@@ -8,7 +8,7 @@
 
 <div align=center>
     <a href="https://project-web3-pink.vercel.app/">
-      <img src="./public/web3_1.png" />
+      <img src="./client/public/web3_1.png" />
     </a>
 </div>
 
@@ -29,11 +29,8 @@
 - yarn dev || npm run dev
 
 # About Me
-
-<div align=center>
-    <a href="https://ttv-tranthuyvy-cv.vercel.app/">
-      <h6>https://ttv-tranthuyvy-cv.vercel.app</h6>
-    </a>
-</div>
+  <a href="https://ttv-tranthuyvy-cv.vercel.app/">
+    <h2>https://ttv-tranthuyvy-cv.vercel.app</h2>
+  </a>
 
 [website]: https://project-web3-pink.vercel.app/
