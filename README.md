@@ -8,7 +8,7 @@
 
 <div align=center>
     <a href="https://project-web3-pink.vercel.app/">
-      <img src="./public/web3_1.png" />
+      <img src="./client/public/web3_1.png" />
     </a>
 </div>
 
